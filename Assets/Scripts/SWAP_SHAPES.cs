@@ -34,6 +34,10 @@ public class NewBehaviourScript : MonoBehaviour
         Color shape1Color = shape1Renderer.material.color;
         Color shape2Color = shape2Renderer.material.color;
 
+        // Сохранение текущих тегов фигур
+        string shape1Tag = shape1.tag;
+        string shape2Tag = shape2.tag;
+
         // Обмен позициями
         shape1.transform.position = shape2Position;
         shape2.transform.position = shape1Position;
@@ -42,13 +46,17 @@ public class NewBehaviourScript : MonoBehaviour
         shape1Renderer.material.color = shape2Color;
         shape2Renderer.material.color = shape1Color;
 
+        // Обмен тегов
+        shape1Renderer.tag = shape2Tag;
+        shape2Renderer.tag = shape1Tag;
+
         SwapControls();
     }
 
     void SwapControls()
     {
-        PLAYER_2_CONTROLLER SphereControll = shape1.GetComponent<PLAYER_2_CONTROLLER>();
-        PLAYER_1_CONTROLLER CubeControll = shape2.GetComponent<PLAYER_1_CONTROLLER>();
+        PLAYER_2_CONTROLLER SphereControll = shape2.GetComponent<PLAYER_2_CONTROLLER>();
+        PLAYER_1_CONTROLLER CubeControll = shape1.GetComponent<PLAYER_1_CONTROLLER>();
 
         isUsingArrowKeys = !isUsingArrowKeys;
 

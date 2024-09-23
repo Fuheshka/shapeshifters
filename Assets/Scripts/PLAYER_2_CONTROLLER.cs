@@ -7,24 +7,29 @@ public class PLAYER_2_CONTROLLER : MonoBehaviour
     public float speed = 10f;
     public float jumpForce = 5f;
     private Rigidbody rb;
-    public Vector3 jump;
+    public bool isJumping;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        jump = new Vector3(0.0f, 2.0f, 0.0f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        isJumping = false;
     }
 
     void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        float moveHorizontal = Input.GetAxis("Horizontal2");
+        float moveVertical = Input.GetAxis("Vertical2");
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         rb.AddForce(movement * speed * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.RightControl) && isJumping == false)
         {
-            rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isJumping = true;
         }
     }
 }

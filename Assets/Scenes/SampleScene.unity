@@ -891,9 +891,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2ed1dd5d30dbd4b8f097fe6b79aa26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1000
-  jumpForce: 5
-  jump: {x: 0, y: 0, z: 0}
+  speed: 2000
+  jumpForce: 7
+  isJumping: 0
 --- !u!135 &710644603
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -988,8 +988,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710644601}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 2
+  m_Drag: 0.5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1014,13 +1014,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710644601}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b4a007da15a0c044af8bc29158646c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1000
-  jumpForce: 5
+  speed: 2000
+  jumpForce: 7
+  isJumping: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,8 +1654,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4a007da15a0c044af8bc29158646c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1000
-  jumpForce: 5
+  speed: 2000
+  jumpForce: 7
+  isJumping: 0
 --- !u!54 &1762573204
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1663,8 +1665,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762573202}
   serializedVersion: 4
-  m_Mass: 0.7
-  m_Drag: 1
+  m_Mass: 2
+  m_Drag: 0.5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1775,14 +1777,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762573202}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e2ed1dd5d30dbd4b8f097fe6b79aa26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1000
-  jumpForce: 5
-  jump: {x: 0, y: 0, z: 0}
+  speed: 2000
+  jumpForce: 2
+  isJumping: 0
 --- !u!1 &1812464933
 GameObject:
   m_ObjectHideFlags: 0
