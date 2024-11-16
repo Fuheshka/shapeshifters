@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Player1
   - Player2
+  - Fall_sphere_pink
+  - Fall_sphere_red
   layers:
   - Default
   - TransparentFX
